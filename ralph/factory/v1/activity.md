@@ -32,3 +32,5 @@
 | 12 | B-001 | completed | 2m | Created BlueprintLayout.swift with NodeLayout/NodeConnection structs, 12-node layout engine (3-column grid with failure branching), bezier curve connections, path computation for particle animation |
 | 12 | B-001 | completed | 162s | |
 | 13 | B-002 | completed | 3m | Created BlueprintNodeView (agentic cloud shape + deterministic rectangle, status visuals, pulsing glow, selection ring), ConnectionView (bezier curves, dashed/solid strokes, arrow heads, status-based coloring), ConnectionsLayerView |
+| 13 | B-002 | completed | 153s | |
+| 14 | B-003 | completed | 2m | Created ParticleFlowView with TimelineView-driven Canvas animation, 4 particles per active connection, bezier path traversal, trail effects (2 fading copies), glow layers, fade in/out at endpoints, configurable speed via simulationSpeed |

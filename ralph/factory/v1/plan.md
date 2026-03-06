@@ -184,7 +184,7 @@
     "title": "Create animated particle flow system",
     "description": "Create Sources/MissionControl/Views/Blueprint/ParticleFlowView.swift. Implement a particle system that animates small glowing dots (3-4pt circles) traveling along the connection bezier paths between nodes. Particles flow from completed nodes toward the active node. Use TimelineView for smooth 60fps animation. Particle properties: position along path (0.0-1.0), opacity (fade in/out at endpoints), color (indigo for success path, red for failure path), speed (configurable via simulationSpeed). Show 3-5 particles per active connection, staggered. Particles should have a subtle trail effect (2-3 fading copies behind).",
     "dependencies": ["B-002"],
-    "status": "pending",
+    "status": "completed",
     "model": "opus"
   },
   {
