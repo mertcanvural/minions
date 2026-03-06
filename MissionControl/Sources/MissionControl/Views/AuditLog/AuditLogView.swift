@@ -222,21 +222,39 @@ struct AuditLogView: View {
 
     private var emptyState: some View {
         VStack(spacing: 16) {
-            Image(systemName: "doc.text.magnifyingglass")
-                .font(.system(size: 44, weight: .light))
-                .foregroundStyle(DesignTokens.textSecondary.opacity(0.5))
-            Text(viewModel.searchQuery.isEmpty && viewModel.selectedEventTypes.isEmpty
-                 ? "No audit events"
-                 : "No matching events")
-                .font(DesignTokens.Typography.subheading)
-                .foregroundStyle(DesignTokens.textSecondary)
-            if !viewModel.searchQuery.isEmpty || !viewModel.selectedEventTypes.isEmpty {
-                Button("Clear Filters") {
-                    viewModel.searchQuery = ""
-                    viewModel.selectedEventTypes = []
+            if viewModel.useLiveData && viewModel.auditDirectoryMissing {
+                Image(systemName: "folder.badge.questionmark")
+                    .font(.system(size: 44, weight: .light))
+                    .foregroundStyle(DesignTokens.warning.opacity(0.7))
+                Text("Audit directory not found")
+                    .font(DesignTokens.Typography.subheading)
+                    .foregroundStyle(DesignTokens.textSecondary)
+                Text("~/.minion/audit/ does not exist.\nRun at least one Minions task to generate audit logs,\nor switch to Mock Data.")
+                    .font(DesignTokens.Typography.caption)
+                    .foregroundStyle(DesignTokens.textSecondary.opacity(0.7))
+                    .multilineTextAlignment(.center)
+                Button("Switch to Mock Data") {
+                    viewModel.toggleDataSource()
                 }
                 .buttonStyle(.bordered)
                 .tint(DesignTokens.accent)
+            } else {
+                Image(systemName: "doc.text.magnifyingglass")
+                    .font(.system(size: 44, weight: .light))
+                    .foregroundStyle(DesignTokens.textSecondary.opacity(0.5))
+                Text(viewModel.searchQuery.isEmpty && viewModel.selectedEventTypes.isEmpty
+                     ? "No audit events"
+                     : "No matching events")
+                    .font(DesignTokens.Typography.subheading)
+                    .foregroundStyle(DesignTokens.textSecondary)
+                if !viewModel.searchQuery.isEmpty || !viewModel.selectedEventTypes.isEmpty {
+                    Button("Clear Filters") {
+                        viewModel.searchQuery = ""
+                        viewModel.selectedEventTypes = []
+                    }
+                    .buttonStyle(.bordered)
+                    .tint(DesignTokens.accent)
+                }
             }
         }
         .frame(maxWidth: .infinity)
