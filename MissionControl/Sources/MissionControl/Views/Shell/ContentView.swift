@@ -12,7 +12,7 @@ struct ContentView: View {
             case .blueprint:
                 BlueprintView()
             case .sandboxes:
-                placeholderView(title: "Sandboxes", icon: "shippingbox")
+                SandboxView()
             case .agents:
                 placeholderView(title: "Agents", icon: "person.3")
             case .auditLog:
