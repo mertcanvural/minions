@@ -256,7 +256,7 @@
     "title": "Create Menu Bar Extra",
     "description": "Create Sources/MissionControl/Views/MenuBar/MenuBarView.swift for the MenuBarExtra content. Show: connection status header (colored dot + 'Connected'/'Disconnected'), stats row (Active: N, Success: N%, Queue: N) in compact HStack, divider, last 3 audit events as compact rows (time + event type + task ID), divider, buttons: 'Open Dashboard' (opens/focuses main window), 'Launch Task...' (opens sheet with text field), 'View Audit Log' (switches to audit tab). Footer: 'Settings...' link + version label. Update MissionControlApp.swift MenuBarExtra to use this view with a systemImage that changes based on connection status (circle.fill colored green/red). Keep the menu bar view lightweight - it reads from shared ViewModels.",
     "dependencies": ["C-001", "C-005", "N-002"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
