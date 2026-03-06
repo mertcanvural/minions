@@ -18,3 +18,7 @@
 | 5 | C-003 | completed | 2m | Created SandboxViewModel with @Observable @MainActor, filteredSandboxes computed property, openTerminal using osascript for iTerm2/Terminal.app, cleanup with optimistic update |
 | 5 | C-003 | completed | 114s | |
 | 6 | C-004 | completed | 2m | Created AgentProfilesViewModel with @Observable @MainActor, loadProfiles(), routeTask(), estimateComplexity() ported from agent-routing.md heuristic |
+| 6 | C-004 | completed | 87s | |
+| 7 | C-005 | completed | 2m | Created AuditLogViewModel (dual data source, filteredEvents, JSON/CSV export) and SettingsViewModel (all settings fields, URLSession connection test, terminal detection) |
+| 7 | C-005 | completed | 140s | |
+| 8 | N-001 | completed | 3m | Created SidebarView (NavigationSplitView with 6-item list, accent highlight, connection status), updated ContentView (tab switcher with placeholders), updated MissionControlApp to use SidebarView as root |

@@ -121,7 +121,7 @@
     "title": "Create AuditLogViewModel and SettingsViewModel",
     "description": "Create Sources/MissionControl/ViewModels/AuditLogViewModel.swift as @Observable class. Properties: events ([AuditEvent]), filteredEvents (computed), useLiveData (Bool toggling real vs mock), searchQuery (String), selectedEventTypes (Set<AuditEventType>), isAutoScrolling, isLoading. Methods: loadEvents() async, toggleDataSource(), exportEvents(format: json|csv) -> URL. Takes both BridgeServiceProtocol and AuditFileServiceProtocol. Create Sources/MissionControl/ViewModels/SettingsViewModel.swift as @Observable class. Properties matching all settings fields. Methods: save() async, testConnection() async -> Bool, resetToDefaults(), detectTerminal() -> String. Takes SettingsServiceProtocol.",
     "dependencies": ["D-003"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
@@ -130,7 +130,7 @@
     "title": "Create sidebar navigation shell",
     "description": "Create Sources/MissionControl/Views/Shell/SidebarView.swift with NavigationSplitView. Sidebar has List with selection binding to AppState.selectedTab. Items: Dashboard (gauge), Blueprint (point.3.connected.trianglepath.dotted), Sandboxes (shippingbox), Agents (person.3), Audit Log (doc.text.magnifyingglass), Settings (gear). Each item shows SF Symbol + label. Highlight uses DesignTokens.accent. Bottom of sidebar shows connection status indicator (green/red dot + text). Create Sources/MissionControl/Views/Shell/ContentView.swift that switches on selectedTab to show the appropriate screen view.",
     "dependencies": ["F-003", "F-004"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
