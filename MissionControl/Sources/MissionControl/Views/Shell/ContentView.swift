@@ -16,7 +16,7 @@ struct ContentView: View {
             case .agents:
                 AgentProfilesView()
             case .auditLog:
-                placeholderView(title: "Audit Log", icon: "doc.text.magnifyingglass")
+                AuditLogView()
             case .settings:
                 placeholderView(title: "Settings", icon: "gear")
             }
