@@ -1,11 +1,47 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(AppState.self) private var appState
+    @Environment(\.colorScheme) private var colorScheme
+
     var body: some View {
-        Text("Mission Control Dashboard")
+        Group {
+            switch appState.selectedTab {
+            case .dashboard:
+                placeholderView(title: "Dashboard", icon: "gauge")
+            case .blueprint:
+                placeholderView(title: "Blueprint", icon: "point.3.connected.trianglepath.dotted")
+            case .sandboxes:
+                placeholderView(title: "Sandboxes", icon: "shippingbox")
+            case .agents:
+                placeholderView(title: "Agents", icon: "person.3")
+            case .auditLog:
+                placeholderView(title: "Audit Log", icon: "doc.text.magnifyingglass")
+            case .settings:
+                placeholderView(title: "Settings", icon: "gear")
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(DesignTokens.background(for: colorScheme))
+    }
+
+    private func placeholderView(title: String, icon: String) -> some View {
+        VStack(spacing: DesignTokens.Spacing.itemSpacing) {
+            Image(systemName: icon)
+                .font(.system(size: 48, weight: .light))
+                .foregroundStyle(DesignTokens.textSecondary)
+            Text(title)
+                .font(DesignTokens.Typography.heading)
+                .foregroundStyle(DesignTokens.textPrimary(for: colorScheme))
+            Text("Coming soon")
+                .font(DesignTokens.Typography.caption)
+                .foregroundStyle(DesignTokens.textSecondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
 #Preview {
     ContentView()
+        .environment(AppState())
 }

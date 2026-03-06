@@ -6,18 +6,24 @@ struct MissionControlApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SidebarView()
                 .environment(appState)
                 .applyTheme(appState.themePreference)
+                .frame(
+                    minWidth: DesignTokens.Spacing.minWindowWidth,
+                    minHeight: DesignTokens.Spacing.minWindowHeight
+                )
         }
         .windowStyle(.hiddenTitleBar)
 
         WindowGroup("Blueprint Viewer", id: "blueprint-popout") {
             Text("Blueprint Viewer")
+                .environment(appState)
         }
 
         WindowGroup("Audit Log", id: "audit-popout") {
             Text("Audit Log")
+                .environment(appState)
         }
 
         Settings {
