@@ -14,7 +14,7 @@ struct ContentView: View {
             case .sandboxes:
                 SandboxView()
             case .agents:
-                placeholderView(title: "Agents", icon: "person.3")
+                AgentProfilesView()
             case .auditLog:
                 placeholderView(title: "Audit Log", icon: "doc.text.magnifyingglass")
             case .settings:
