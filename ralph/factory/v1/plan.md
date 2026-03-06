@@ -175,7 +175,7 @@
     "title": "Create Blueprint node views",
     "description": "Create Sources/MissionControl/Views/Blueprint/BlueprintNodeView.swift. Agentic nodes: rounded cloud shape using custom Path with soft curves, indigo gradient border (2pt), inner glow effect when active, icon + name + duration label. Deterministic nodes: sharp rectangle with 4pt corner radius, blue-gray border, icon + name + duration. Both show status: pending (dim, gray), running (bright glow, pulsing animation), completed (green tint, checkmark), failed (red tint, xmark), skipped (very dim). Selected node has a highlight ring. Create Sources/MissionControl/Views/Blueprint/ConnectionView.swift drawing bezier curves between nodes with animated dashed stroke for pending, solid for completed, red for failed paths.",
     "dependencies": ["B-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "opus"
   },
   {

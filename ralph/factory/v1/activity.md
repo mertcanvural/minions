@@ -30,3 +30,5 @@
 | 11 | H-002 | completed | 3m | Added launchTask(description:project:) to DashboardViewModel using injected service; added isLaunchingTask/launchTaskError state; wired DashboardView Quick Launch to vm.launchTask; integrated SettingsViewModel for configurable auto-refresh interval |
 | 11 | H-002 | completed | 499s | |
 | 12 | B-001 | completed | 2m | Created BlueprintLayout.swift with NodeLayout/NodeConnection structs, 12-node layout engine (3-column grid with failure branching), bezier curve connections, path computation for particle animation |
+| 12 | B-001 | completed | 162s | |
+| 13 | B-002 | completed | 3m | Created BlueprintNodeView (agentic cloud shape + deterministic rectangle, status visuals, pulsing glow, selection ring), ConnectionView (bezier curves, dashed/solid strokes, arrow heads, status-based coloring), ConnectionsLayerView |
