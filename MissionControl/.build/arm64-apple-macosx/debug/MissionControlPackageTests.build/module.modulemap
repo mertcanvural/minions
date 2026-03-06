@@ -1,4 +1,0 @@
-module MissionControlPackageTests {
-    header "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControlPackageTests.build/MissionControlPackageTests-Swift.h"
-    requires objc
-}
