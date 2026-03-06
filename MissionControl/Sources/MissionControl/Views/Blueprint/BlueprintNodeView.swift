@@ -10,7 +10,9 @@ struct BlueprintNodeView: View {
     let onTap: () -> Void
 
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var isPulsing = false
+    @State private var flashOpacity: CGFloat = 0
 
     var body: some View {
         Group {
@@ -20,10 +22,35 @@ struct BlueprintNodeView: View {
                 deterministicNode
             }
         }
+        .overlay {
+            // Completion flash overlay
+            if flashOpacity > 0 {
+                Group {
+                    if layout.nodeType == .agentic {
+                        AgenticShape()
+                            .fill(Color.white)
+                            .frame(width: layout.size.width, height: layout.size.height)
+                    } else {
+                        RoundedRectangle(cornerRadius: 4)
+                            .fill(Color.white)
+                            .frame(width: layout.size.width, height: layout.size.height)
+                    }
+                }
+                .opacity(flashOpacity)
+                .allowsHitTesting(false)
+            }
+        }
         .position(layout.position)
         .onTapGesture(perform: onTap)
-        .onChange(of: status) { _, newStatus in
+        .onChange(of: status) { oldStatus, newStatus in
             isPulsing = (newStatus == .running)
+
+            if !reduceMotion && (newStatus == .completed || newStatus == .failed) && oldStatus == .running {
+                flashOpacity = 0.6
+                withAnimation(.easeOut(duration: 0.3)) {
+                    flashOpacity = 0
+                }
+            }
         }
         .onAppear {
             isPulsing = (status == .running)

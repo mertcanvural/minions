@@ -5,9 +5,13 @@ import SwiftUI
 struct BlueprintCanvasView: View {
     @Bindable var viewModel: BlueprintViewModel
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     @State private var magnification: CGFloat = 1.0
     @State private var steadyStateMagnification: CGFloat = 1.0
+    @State private var mouseOffset: CGSize = .zero
+    @State private var scrollProxy: ScrollViewProxy?
+    @State private var previousActiveNodeIndex: Int = 0
 
     private var layouts: [NodeLayout] {
         guard let run = viewModel.currentRun else { return [] }
@@ -31,6 +35,7 @@ struct BlueprintCanvasView: View {
                         )
                 }
                 .scrollIndicators(.hidden)
+                .onAppear { scrollProxy = proxy }
             }
             .gesture(magnificationGesture)
 
@@ -46,21 +51,42 @@ struct BlueprintCanvasView: View {
             }
         }
         .animation(.spring(duration: 0.3), value: viewModel.selectedNode?.id)
+        .onContinuousHover { phase in
+            guard !reduceMotion else { return }
+            switch phase {
+            case .active(let location):
+                mouseOffset = CGSize(
+                    width: (location.x - 400) * 0.008,
+                    height: (location.y - 300) * 0.008
+                )
+            case .ended:
+                withAnimation(.easeOut(duration: 0.5)) {
+                    mouseOffset = .zero
+                }
+            }
+        }
+        .onChange(of: viewModel.activeNodeIndex) { oldValue, newValue in
+            autoScrollToActiveNode()
+        }
     }
 
     // MARK: - Canvas Content
 
     private var canvasContent: some View {
         ZStack {
-            // Layer 1: Background grid
+            // Layer 1: Background grid with parallax
             gridPattern
+                .offset(mouseOffset)
 
-            // Layer 2: Connections
+            // Layer 2: Ambient background particles
+            AmbientParticlesView()
+
+            // Layer 3: Connections
             if let run = viewModel.currentRun {
                 ConnectionsLayerView(layouts: layouts, nodes: run.nodes)
             }
 
-            // Layer 3: Particles
+            // Layer 4: Particles
             if let run = viewModel.currentRun {
                 ParticleFlowLayerView(
                     layouts: layouts,
@@ -69,7 +95,7 @@ struct BlueprintCanvasView: View {
                 )
             }
 
-            // Layer 4: Nodes
+            // Layer 5: Nodes
             if let run = viewModel.currentRun {
                 ForEach(layouts) { layout in
                     let node = run.nodes.first { $0.id == layout.id }
@@ -79,13 +105,30 @@ struct BlueprintCanvasView: View {
                         duration: node?.duration ?? 0,
                         isSelected: viewModel.selectedNode?.id == layout.id,
                         onTap: {
-                            viewModel.selectNode(id: layout.id)
+                            withAnimation(.spring(duration: 0.3)) {
+                                viewModel.selectNode(id: layout.id)
+                            }
                         }
                     )
+                    .id("node-\(layout.id)")
                 }
             }
         }
         .frame(width: canvasSize.width, height: canvasSize.height)
+    }
+
+    // MARK: - Auto-Scroll
+
+    private func autoScrollToActiveNode() {
+        guard !reduceMotion else { return }
+        guard let run = viewModel.currentRun else { return }
+        let idx = viewModel.activeNodeIndex
+        guard idx < run.nodes.count else { return }
+        let nodeId = run.nodes[idx].id
+
+        withAnimation(.spring(duration: 0.6)) {
+            scrollProxy?.scrollTo("node-\(nodeId)", anchor: .center)
+        }
     }
 
     // MARK: - Grid Pattern
@@ -379,6 +422,72 @@ struct BlueprintCanvasView: View {
             let minutes = Int(duration) / 60
             let seconds = Int(duration) % 60
             return "\(minutes)m \(seconds)s"
+        }
+    }
+}
+
+// MARK: - Ambient Background Particles
+
+struct AmbientParticlesView: View {
+    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    private struct AmbientDot {
+        let x: CGFloat
+        let y: CGFloat
+        let size: CGFloat
+        let opacity: CGFloat
+        let speed: CGFloat
+        let phase: CGFloat
+    }
+
+    private let dots: [AmbientDot] = {
+        var result: [AmbientDot] = []
+        // Use a fixed seed pattern for consistency
+        let count = 30
+        for i in 0..<count {
+            let fi = CGFloat(i)
+            result.append(AmbientDot(
+                x: ((fi * 137.508).truncatingRemainder(dividingBy: 1.0) + fi * 0.01).truncatingRemainder(dividingBy: 1.0),
+                y: ((fi * 97.31).truncatingRemainder(dividingBy: 1.0) + fi * 0.007).truncatingRemainder(dividingBy: 1.0),
+                size: 1.5 + (fi * 23.7).truncatingRemainder(dividingBy: 2.0),
+                opacity: 0.04 + (fi * 17.3).truncatingRemainder(dividingBy: 0.06),
+                speed: 0.3 + (fi * 11.9).truncatingRemainder(dividingBy: 0.5),
+                phase: (fi * 47.1).truncatingRemainder(dividingBy: .pi * 2)
+            ))
+        }
+        return result
+    }()
+
+    var body: some View {
+        if !reduceMotion {
+            TimelineView(.animation(minimumInterval: 1.0 / 30.0)) { timeline in
+                Canvas { context, size in
+                    let now = timeline.date.timeIntervalSinceReferenceDate
+                    let baseColor = colorScheme == .dark
+                        ? Color.white
+                        : Color(red: 0.39, green: 0.4, blue: 0.95)
+
+                    for dot in dots {
+                        let x = dot.x * size.width + sin(now * dot.speed + dot.phase) * 15
+                        let y = dot.y * size.height + cos(now * dot.speed * 0.7 + dot.phase) * 10
+                        let pulseFactor = 0.7 + 0.3 * sin(now * dot.speed * 1.5 + dot.phase)
+
+                        let rect = CGRect(
+                            x: x - dot.size / 2,
+                            y: y - dot.size / 2,
+                            width: dot.size,
+                            height: dot.size
+                        )
+
+                        context.fill(
+                            Path(ellipseIn: rect),
+                            with: .color(baseColor.opacity(dot.opacity * pulseFactor))
+                        )
+                    }
+                }
+            }
+            .allowsHitTesting(false)
         }
     }
 }

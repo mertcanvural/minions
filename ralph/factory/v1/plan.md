@@ -202,7 +202,7 @@
     "title": "Add Blueprint cinematic effects",
     "description": "Enhance BlueprintCanvasView with cinematic polish: 1) Background: subtle dot grid pattern that parallax-scrolls slightly on mouse movement. 2) Active node: pulsing glow ring animation (scale 1.0->1.05, opacity 0.6->1.0, repeating). 3) Node completion: brief flash animation (white overlay fade out over 0.3s). 4) Connection activation: draw-on animation (trim from 0->1 over 0.5s) when a new connection becomes active. 5) Global ambient particles: very faint, slow-moving dots in background for atmosphere. 6) Smooth camera auto-scroll to keep the active node centered. Use withAnimation(.spring) for all state transitions.",
     "dependencies": ["B-004"],
-    "status": "pending",
+    "status": "completed",
     "model": "opus"
   },
   {

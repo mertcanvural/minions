@@ -8,12 +8,22 @@ struct ConnectionView: View {
     let toStatus: NodeStatus
 
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var drawProgress: CGFloat = 0
 
     var body: some View {
         let path = BlueprintLayoutEngine.connectionPath(for: connection)
 
         ZStack {
+            // Background dashed path (always visible for pending)
+            if isPending {
+                path.stroke(
+                    strokeColor,
+                    style: strokeStyle
+                )
+                .opacity(connectionOpacity)
+            }
+
             // Shadow/glow layer for active connections
             if isActive {
                 path.stroke(
@@ -21,22 +31,32 @@ struct ConnectionView: View {
                     style: StrokeStyle(lineWidth: 4, lineCap: .round)
                 )
                 .blur(radius: 4)
+                .opacity(Double(drawProgress))
             }
 
-            // Main connection stroke
-            path.stroke(
-                strokeColor,
-                style: strokeStyle
-            )
-            .opacity(connectionOpacity)
+            // Main connection stroke with trim animation
+            if !isPending {
+                path.trim(from: 0, to: drawProgress)
+                    .stroke(
+                        strokeColor,
+                        style: StrokeStyle(lineWidth: 2, lineCap: .round)
+                    )
+                    .opacity(connectionOpacity)
+            }
 
-            // Arrow at endpoint
-            arrowHead
+            // Arrow at endpoint (only visible when fully drawn)
+            if drawProgress >= 1.0 {
+                arrowHead
+            }
         }
         .onChange(of: fromStatus) { _, newStatus in
             if newStatus == .completed || newStatus == .failed {
-                withAnimation(.easeInOut(duration: 0.5)) {
+                if reduceMotion {
                     drawProgress = 1.0
+                } else {
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        drawProgress = 1.0
+                    }
                 }
             }
         }

@@ -36,3 +36,5 @@
 | 14 | B-003 | completed | 2m | Created ParticleFlowView with TimelineView-driven Canvas animation, 4 particles per active connection, bezier path traversal, trail effects (2 fading copies), glow layers, fade in/out at endpoints, configurable speed via simulationSpeed |
 | 14 | B-003 | completed | 129s | |
 | 15 | B-004 | completed | 3m | Created BlueprintCanvasView (scrollable/zoomable canvas, dot grid, layered connections/particles/nodes, glass control bar with play/pause/step/reset/speed, node detail side panel), BlueprintView (screen wrapper with loading/error/empty states), wired into ContentView and BlueprintPopoutView |
+| 15 | B-004 | completed | 182s | |
+| 16 | B-005 | completed | 3m | Added cinematic effects: parallax dot grid on mouse hover, ambient background particles (30 slow-moving dots), node completion flash overlay (white fade-out 0.3s), connection draw-on trim animation (0.5s), auto-scroll to active node via ScrollViewReader, reduceMotion accessibility support |
