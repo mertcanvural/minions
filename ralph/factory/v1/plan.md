@@ -67,7 +67,7 @@
     "title": "Create service protocols",
     "description": "Create Sources/MissionControl/Services/Protocols/BridgeServiceProtocol.swift with: protocol BridgeServiceProtocol defining methods: fetchDashboardMetrics() async throws -> DashboardMetrics, fetchRecentTasks() async throws -> [RecentTask], fetchBlueprintRun(id: String?) async throws -> BlueprintRun, fetchSandboxes() async throws -> [Sandbox], fetchPoolStats() async throws -> PoolStats, fetchAgentProfiles() async throws -> [AgentProfile], routeTask(description: String) async throws -> TaskRouting, launchTask(description: String, project: String) async throws -> String, fetchAuditEvents(limit: Int) async throws -> [AuditEvent]. Create Sources/MissionControl/Services/Protocols/AuditFileServiceProtocol.swift with: protocol for reading real JSONL files: loadEvents(from path: String, limit: Int) throws -> [AuditEvent], availableLogFiles(in directory: String) throws -> [URL]. Create Sources/MissionControl/Services/Protocols/SettingsServiceProtocol.swift with: protocol for loading/saving settings (bridgeURL, apiKey, refreshIntervals, theme, auditPath, terminalPreference).",
     "dependencies": ["D-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
