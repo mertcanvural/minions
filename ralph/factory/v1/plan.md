@@ -247,7 +247,7 @@
     "title": "Create Settings screen",
     "description": "Create Sources/MissionControl/Views/Settings/SettingsView.swift using Form with grouped sections. Connection section: TextField for bridge URL, SecureField for API key, Button 'Test Connection' with inline status (checkmark.circle.fill green or xmark.circle.fill red). Refresh section: Slider for dashboard interval (5-60s, step 5), Slider for audit interval (1-30s, step 1), labels showing current values. Appearance section: Picker (Dark/Light/System) with .segmentedPickerStyle, color swatches for accent (5 preset colors as tappable circles). Audit section: TextField for audit path with folder icon button (opens NSOpenPanel), Stepper for max events. Terminal section: detected terminal display with Picker override. Advanced section: Button 'Reset to Defaults' (with confirmation alert), Toggle for debug logging. Wire to SettingsViewModel. Use @AppStorage for persistence.",
     "dependencies": ["C-005", "N-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {

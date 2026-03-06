@@ -18,7 +18,7 @@ struct ContentView: View {
             case .auditLog:
                 AuditLogView()
             case .settings:
-                placeholderView(title: "Settings", icon: "gear")
+                SettingsView()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
