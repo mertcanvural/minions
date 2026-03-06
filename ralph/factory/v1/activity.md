@@ -28,3 +28,5 @@
 | 10 | H-001 | completed | 5m | Created PipelineActivityChart (Swift Charts BarMark, 24-hour data), RecentTasksTable (Table with Task/Agent/Status/Duration), QuickLaunchCard (TextEditor, complexity chips, launch button), DashboardView (full screen layout with MetricCards, chart, table, quick launch); wired ContentView dashboard tab |
 | 10 | H-001 | completed | 289s | |
 | 11 | H-002 | completed | 3m | Added launchTask(description:project:) to DashboardViewModel using injected service; added isLaunchingTask/launchTaskError state; wired DashboardView Quick Launch to vm.launchTask; integrated SettingsViewModel for configurable auto-refresh interval |
+| 11 | H-002 | completed | 499s | |
+| 12 | B-001 | completed | 2m | Created BlueprintLayout.swift with NodeLayout/NodeConnection structs, 12-node layout engine (3-column grid with failure branching), bezier curve connections, path computation for particle animation |

@@ -166,7 +166,7 @@
     "title": "Create Blueprint node layout engine",
     "description": "Create Sources/MissionControl/Views/Blueprint/BlueprintLayout.swift. Define the 12-node layout as a computed graph: vertical flow with branching at lint (pass/fail) and CI attempts (pass/fail). Each node has a position (CGPoint), size (CGSize), and connections to next nodes. The layout engine calculates positions for the full 12-node sequence from docs/blueprint-engine.md: IMPLEMENT TASK -> RUN LINTERS -> (fail) FIX LINT -> GIT COMMIT -> PUSH BRANCH -> CI ATTEMPT 1 -> (fail) FIX CI 1 -> CI ATTEMPT 2 -> (fail) FIX CI 2 -> CI FINAL -> CREATE PR / HUMAN REVIEW. Success path flows straight down, failure branches offset to the right then rejoin. Return [NodeLayout] with id, position, size, nodeType, connections [(fromPoint, toPoint, isFailurePath)].",
     "dependencies": ["D-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "opus"
   },
   {
