@@ -8,6 +8,12 @@
     "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp~partial.swiftmodule",
     "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.swiftdeps"
   },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swiftdeps"
+  },
   "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift": {
     "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.d",
     "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o",

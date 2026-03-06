@@ -32,6 +32,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift"
         },
         {
@@ -48,6 +52,7 @@
       "moduleOutputPath" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/Modules/MissionControl.swiftmodule",
       "objects" : [
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.swift.o",
+        "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swift.o",
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o"
       ],
       "otherArguments" : [
@@ -108,6 +113,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o"
         },
         {
@@ -118,6 +127,7 @@
       "prepareForIndexing" : false,
       "sources" : [
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/App/MissionControlApp.swift",
+        "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift",
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift"
       ],
       "tempsPath" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build",
@@ -427,6 +437,7 @@
       "-incremental",
       "-c",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/App/MissionControlApp.swift",
+      "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift",
       "-I",
       "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/Modules",
@@ -729,6 +740,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift"
         }
       ],
@@ -744,6 +759,10 @@
         {
           "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swift.o"
         },
         {
           "kind" : "file",
@@ -776,6 +795,10 @@
         {
           "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swift.o"
         },
         {
           "kind" : "file",

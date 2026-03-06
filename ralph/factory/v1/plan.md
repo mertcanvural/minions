@@ -22,7 +22,7 @@
     "title": "Create Package.swift and app entry point",
     "description": "Create MissionControl/Package.swift with swift-tools-version 5.9, macOS 15 platform, single executable target 'MissionControl' with source in Sources/MissionControl and test targets. Create Sources/MissionControl/App/MissionControlApp.swift with @main App struct, WindowGroup for main window, Settings scene, and MenuBarExtra. Use .windowStyle(.hiddenTitleBar) for the main window.",
     "dependencies": [],
-    "status": "pending",
+    "status": "completed",
     "model": "haiku"
   },
   {
