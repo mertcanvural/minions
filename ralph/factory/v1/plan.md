@@ -265,7 +265,7 @@
     "title": "Create ViewModel unit tests",
     "description": "Create Tests/MissionControlTests/DashboardViewModelTests.swift: test loadData populates metrics and recentTasks, test auto-refresh timer fires, test error handling. Create Tests/MissionControlTests/BlueprintViewModelTests.swift: test loadRun creates 12 nodes, test simulation advances through nodes, test pause/resume, test stepForward, test reset. Create Tests/MissionControlTests/AuditLogViewModelTests.swift: test loadEvents, test filtering by event type, test search filtering, test data source toggle. All tests use mock services injected via protocol.",
     "dependencies": ["C-001", "C-002", "C-005"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
