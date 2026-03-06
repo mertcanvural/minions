@@ -17,7 +17,12 @@ let package = Package(
         .testTarget(
             name: "MissionControlUITests",
             dependencies: ["MissionControl"],
-            path: "Tests/MissionControlUITests"
+            path: "Tests/MissionControlUITests",
+            swiftSettings: [
+                // XCUIApplication is @MainActor-isolated; Swift 5 mode avoids
+                // strict send-isolation errors in UI test code.
+                .swiftLanguageMode(.v5)
+            ]
         ),
     ]
 )

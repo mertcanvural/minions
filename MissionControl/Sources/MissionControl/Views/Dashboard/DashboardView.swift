@@ -23,6 +23,7 @@ struct DashboardView: View {
                         trend: vm.metrics.map { $0.trends.activeTasksTrend > 0 ? .up : .down },
                         subtitle: vm.metrics.map { trendLabel($0.trends.activeTasksTrend, unit: "") }
                     )
+                    .accessibilityIdentifier("metric.activeTasks")
 
                     MetricCard(
                         title: "Success Rate",
@@ -30,6 +31,7 @@ struct DashboardView: View {
                         trend: vm.metrics.map { $0.trends.successRateTrend >= 0 ? .up : .down },
                         subtitle: vm.metrics.map { trendLabel(Int($0.trends.successRateTrend * 100), unit: "%") }
                     )
+                    .accessibilityIdentifier("metric.successRate")
 
                     MetricCard(
                         title: "Avg Duration",
@@ -37,6 +39,7 @@ struct DashboardView: View {
                         trend: vm.metrics.map { $0.trends.avgDurationTrend <= 0 ? .up : .down },
                         subtitle: vm.metrics.map { trendDuration($0.trends.avgDurationTrend) }
                     )
+                    .accessibilityIdentifier("metric.avgDuration")
 
                     MetricCard(
                         title: "Queue Depth",
@@ -44,7 +47,9 @@ struct DashboardView: View {
                         trend: vm.metrics.map { $0.trends.queueDepthTrend <= 0 ? .up : .down },
                         subtitle: vm.metrics.map { trendLabel($0.trends.queueDepthTrend, unit: " tasks") }
                     )
+                    .accessibilityIdentifier("metric.queueDepth")
                 }
+                .accessibilityIdentifier("dashboard.metricCards")
 
                 // MARK: Pipeline Activity Chart
                 SectionCard(title: "Pipeline Activity", subtitle: "Completions by hour (last 24h)") {
@@ -65,6 +70,7 @@ struct DashboardView: View {
                         }
                     }
                     .frame(maxWidth: .infinity)
+                    .accessibilityIdentifier("section.recentTasks")
 
                     // Quick Launch (fixed width)
                     SectionCard(title: "Quick Launch", subtitle: nil) {
@@ -76,6 +82,7 @@ struct DashboardView: View {
                         )
                     }
                     .frame(width: 280)
+                    .accessibilityIdentifier("section.quickLaunch")
                 }
 
                 // Error banners

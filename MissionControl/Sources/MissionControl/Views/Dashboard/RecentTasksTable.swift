@@ -36,6 +36,7 @@ struct RecentTasksTable: View {
             .width(min: 60, ideal: 75, max: 90)
         }
         .tableStyle(.inset(alternatesRowBackgrounds: true))
+        .accessibilityIdentifier("dashboard.recentTasksTable")
     }
 
     private func formatDuration(_ seconds: TimeInterval) -> String {

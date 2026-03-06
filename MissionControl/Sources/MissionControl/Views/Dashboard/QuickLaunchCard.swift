@@ -31,6 +31,7 @@ struct QuickLaunchCard: View {
                     .padding(.horizontal, 6)
                     .padding(.vertical, 6)
                     .frame(minHeight: 72, maxHeight: 120)
+                    .accessibilityIdentifier("quicklaunch.taskInput")
             }
             .background(DesignTokens.background(for: colorScheme))
             .cornerRadius(8)
@@ -82,6 +83,7 @@ struct QuickLaunchCard: View {
             }
             .buttonStyle(.plain)
             .disabled(taskInput.trimmingCharacters(in: .whitespaces).isEmpty || isLaunching)
+            .accessibilityIdentifier("quicklaunch.launchButton")
         }
     }
 }
