@@ -1,6 +1,10 @@
-# Minions: Stripe-Grade Agentic Engineering System
+# Minions
 
-One-shot coding agents modeled after [Stripe's Minions architecture](https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents). Engineers prompt at the start, review at the end. The system runs unattended in between.
+An agentic engineering system inspired by [Stripe's approach to one-shot coding agents](https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents). Engineers prompt at the start, review at the end — the system runs unattended in between.
+
+## Why Stripe's Approach
+
+Stripe's Minions architecture demonstrated that coding agents work best when you **interleave determinism with AI** — not everything needs an LLM. Their system achieves high reliability by giving agents the same environment as engineers, specializing agents by domain, and shifting feedback left so failures are caught early. This project implements those principles as an open, extensible system.
 
 ## How It Works
 
@@ -10,15 +14,17 @@ Slack / CLI  -->  Sandbox  -->  Context Hydration  -->  Agent Routing
 PR  <--  Blueprint Engine  <--  Tool Shed + Skills  <-------+
 ```
 
-1. **Entry**: Engineer sends a task via Slack (`@minion`) or CLI (`minion_cli.py`)
-2. **Sandbox**: Isolated workspace created (git clone, unique branch, .mdc rules copied)
-3. **Context**: Stack detection, scoped rules, git history, file tree, docs loaded
-4. **Routing**: Task classified, specialized agent selected, complexity estimated
-5. **Tools + Skills**: Curated tool subset and action templates injected into prompt
-6. **Blueprint**: 12-node state machine — agent implements, deterministic steps lint/test/push
-7. **PR**: `gh pr create` (deterministic, no LLM) — engineer reviews
+1. **Entry** — Engineer sends a task via Slack (`@minion`) or CLI (`minion_cli.py`)
+2. **Sandbox** — Isolated workspace created (git clone, unique branch, .mdc rules copied)
+3. **Context** — Stack detection, scoped rules, git history, file tree, docs loaded
+4. **Routing** — Task classified, specialized agent selected, complexity estimated
+5. **Tools + Skills** — Curated tool subset and action templates injected into prompt
+6. **Blueprint** — 12-node state machine: agent implements, deterministic steps lint/test/push
+7. **PR** — `gh pr create` (deterministic, no LLM) — engineer reviews
 
 ## Key Design Principles
+
+Borrowed directly from Stripe's philosophy:
 
 - **Interleave determinism with agents** — not everything needs an LLM
 - **Agents get the same environment as engineers** — DevBox model
@@ -27,7 +33,7 @@ PR  <--  Blueprint Engine  <--  Tool Shed + Skills  <-------+
 - **Out-of-loop by default** — prompt once, review at end
 - **Meta-agentics** — tools that select tools, prompts that build prompts
 
-## Architecture Components
+## Architecture
 
 | Component | Module | Description |
 |---|---|---|
@@ -41,6 +47,10 @@ PR  <--  Blueprint Engine  <--  Tool Shed + Skills  <-------+
 | Skills | `skills.py` | Reusable action templates from markdown files |
 | Audit Log | `audit_log.py` | Persistent JSON Lines event logging |
 | CLI | `minion_cli.py` | Command-line interface with dry-run mode |
+
+## MissionControl
+
+A native macOS companion app (SwiftUI) that provides a visual dashboard for monitoring agents, browsing audit logs, managing sandboxes, and inspecting blueprint execution — all from a menu bar interface.
 
 ## Documentation
 
@@ -75,3 +85,7 @@ python minion_cli.py --status
 - **Infrastructure**: AWS EC2 Ubuntu 24.04, systemd service
 - **Concurrency**: Threaded execution (10 parallel tasks)
 - **Audit**: `~/.minion/audit/` (JSON Lines, one file per day)
+
+## License
+
+MIT
