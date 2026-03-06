@@ -229,7 +229,7 @@
     "title": "Create Audit Log screen",
     "description": "Create Sources/MissionControl/Views/AuditLog/AuditLogView.swift as main screen. Toolbar: Toggle('Live Data'/'Mock Data'), search TextField with magnifying glass icon, filter chips for each AuditEventType (multi-select, colored), auto-scroll toggle, export button (Menu with JSON/CSV options). Main content: Table with columns - Timestamp (SF Mono, secondary color), Task ID (monospace, clickable), Event Type (StatusPill with event-specific colors), Data (truncated, expandable), Duration. Create Sources/MissionControl/Views/AuditLog/AuditEventRow.swift for custom row rendering with expandable JSON detail view. Create Sources/MissionControl/Views/AuditLog/AuditEventDetailView.swift showing full JSON with syntax-highlighted formatting (color keywords, strings, numbers differently). Wire to AuditLogViewModel.",
     "dependencies": ["C-005", "N-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
