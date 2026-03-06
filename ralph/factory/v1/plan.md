@@ -301,7 +301,7 @@
     "title": "Final compilation fix and cleanup",
     "description": "Run 'swift build' and fix ALL compiler errors. Run 'swift test' and fix ALL test failures. Verify: 1) App launches without crashes. 2) All 6 sidebar tabs render their screens. 3) Blueprint simulation can be started and shows animation. 4) Audit log toggle between mock and live works. 5) Settings form is functional. 6) Menu bar extra appears. Remove any dead code, unused imports, or TODO comments. Ensure consistent code style throughout. This is the final task - the app must build and run cleanly.",
     "dependencies": ["X-001", "M-001", "T-003"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   }
 ]
