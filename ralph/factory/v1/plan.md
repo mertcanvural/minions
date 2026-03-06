@@ -238,7 +238,7 @@
     "title": "Implement real JSONL file reading",
     "description": "Create Sources/MissionControl/Services/Mock/RealAuditFileService.swift implementing AuditFileServiceProtocol. Reads actual ~/.minion/audit/audit-YYYY-MM-DD.jsonl files. Parse each line as JSON, map to AuditEvent model. Handle malformed lines gracefully (skip with warning). Implement availableLogFiles() scanning the audit directory. Add file watching using DispatchSource.makeFileSystemObjectSource for live-tailing new events. Update AuditLogViewModel to switch between MockAuditFileService and RealAuditFileService based on useLiveData toggle. Handle case where ~/.minion/audit/ doesn't exist (show helpful message).",
     "dependencies": ["L-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
