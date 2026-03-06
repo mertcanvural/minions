@@ -112,7 +112,7 @@
     "title": "Create AgentProfilesViewModel",
     "description": "Create Sources/MissionControl/ViewModels/AgentProfilesViewModel.swift as @Observable class. Properties: profiles ([AgentProfile]), routingResult (TaskRouting?), taskInput (String), isRouting. Methods: loadProfiles() async, routeTask() async - calls service with taskInput and sets routingResult, estimateComplexity(task:) -> TaskComplexity (port the keyword heuristic from docs/agent-routing.md). Takes BridgeServiceProtocol.",
     "dependencies": ["D-003"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {

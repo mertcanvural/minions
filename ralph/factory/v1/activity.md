@@ -16,3 +16,5 @@
 | 4 | C-002 | completed | 3m | Created BlueprintViewModel with simulation engine, node advancement, speed control, computed progress/counts |
 | 4 | C-002 | completed | 111s | |
 | 5 | C-003 | completed | 2m | Created SandboxViewModel with @Observable @MainActor, filteredSandboxes computed property, openTerminal using osascript for iTerm2/Terminal.app, cleanup with optimistic update |
+| 5 | C-003 | completed | 114s | |
+| 6 | C-004 | completed | 2m | Created AgentProfilesViewModel with @Observable @MainActor, loadProfiles(), routeTask(), estimateComplexity() ported from agent-routing.md heuristic |
