@@ -3,6 +3,7 @@ import SwiftUI
 struct SandboxView: View {
     @State private var viewModel = SandboxViewModel()
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private let columns = [
         GridItem(.adaptive(minimum: 320), spacing: DesignTokens.Spacing.itemSpacing)
@@ -39,8 +40,13 @@ struct SandboxView: View {
                                     Task { await viewModel.cleanup(taskId: sandbox.taskId) }
                                 }
                             )
+                            .transition(.scale(scale: 0.92).combined(with: .opacity))
                         }
                     }
+                    .animation(
+                        reduceMotion ? nil : .spring(response: 0.4, dampingFraction: 0.8),
+                        value: viewModel.filteredSandboxes.map(\.taskId)
+                    )
                 }
             }
             .padding(DesignTokens.Spacing.sectionSpacing)
@@ -126,7 +132,7 @@ struct SandboxView: View {
                 RoundedRectangle(cornerRadius: DesignTokens.Spacing.cardRadius)
                     .fill(DesignTokens.surface(for: colorScheme))
                     .frame(height: 180)
-                    .redacted(reason: .placeholder)
+                    .shimmer()
             }
         }
     }

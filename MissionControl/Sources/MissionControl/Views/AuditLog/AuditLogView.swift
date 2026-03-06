@@ -3,6 +3,7 @@ import SwiftUI
 struct AuditLogView: View {
     @State private var viewModel = AuditLogViewModel()
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var scrollProxy: ScrollViewProxy? = nil
 
     var body: some View {
@@ -200,11 +201,16 @@ struct AuditLogView: View {
                             .listRowSeparator(.visible)
                             .listRowInsets(EdgeInsets())
                             .id(event.id)
+                            .transition(.asymmetric(
+                                insertion: .move(edge: .top).combined(with: .opacity),
+                                removal: .opacity
+                            ))
                     }
                 }
             }
             .listStyle(.plain)
             .background(DesignTokens.background(for: colorScheme))
+            .animation(reduceMotion ? nil : .spring(duration: 0.3), value: viewModel.filteredEvents.count)
             .onChange(of: viewModel.filteredEvents.count) { _, _ in
                 if viewModel.isAutoScrolling, let last = viewModel.filteredEvents.first {
                     withAnimation {

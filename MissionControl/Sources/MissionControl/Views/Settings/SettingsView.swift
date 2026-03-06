@@ -23,7 +23,9 @@ struct SettingsView: View {
     // MARK: - UI State
 
     @State private var showResetAlert = false
+    @State private var sectionsAppeared = false
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     // MARK: - Accent Presets
 
@@ -72,16 +74,24 @@ struct SettingsView: View {
                             .buttonStyle(.bordered)
                             .disabled(vm.isTestingConnection)
 
-                            if vm.isTestingConnection {
-                                ProgressView()
-                                    .controlSize(.small)
-                            } else if let result = vm.connectionTestResult {
-                                Image(systemName: result.isSuccess ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                    .foregroundStyle(result.isSuccess ? DesignTokens.success : DesignTokens.failure)
-                                Text(result.message)
-                                    .font(DesignTokens.Typography.caption)
-                                    .foregroundStyle(DesignTokens.textSecondary)
+                            Group {
+                                if vm.isTestingConnection {
+                                    ProgressView()
+                                        .controlSize(.small)
+                                        .transition(.opacity)
+                                } else if let result = vm.connectionTestResult {
+                                    HStack(spacing: 6) {
+                                        Image(systemName: result.isSuccess ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                            .foregroundStyle(result.isSuccess ? DesignTokens.success : DesignTokens.failure)
+                                        Text(result.message)
+                                            .font(DesignTokens.Typography.caption)
+                                            .foregroundStyle(DesignTokens.textSecondary)
+                                    }
+                                    .transition(.opacity)
+                                }
                             }
+                            .animation(reduceMotion ? nil : .easeInOut(duration: 0.25), value: vm.connectionTestResult != nil)
+                            .animation(reduceMotion ? nil : .easeInOut(duration: 0.25), value: vm.isTestingConnection)
                             Spacer()
                         }
                     }
@@ -239,11 +249,21 @@ struct SettingsView: View {
                 .padding(.top, 8)
             }
             .padding(DesignTokens.Spacing.sectionSpacing)
+            .opacity(sectionsAppeared ? 1 : 0)
+            .offset(y: sectionsAppeared ? 0 : 16)
+            .animation(reduceMotion ? nil : .easeInOut(duration: 0.35), value: sectionsAppeared)
         }
         .background(DesignTokens.background(for: colorScheme))
         .onAppear {
             if auditPath.isEmpty {
                 auditPath = defaultAuditPath
+            }
+            guard !reduceMotion else {
+                sectionsAppeared = true
+                return
+            }
+            withAnimation(.easeInOut(duration: 0.4)) {
+                sectionsAppeared = true
             }
         }
         .alert("Reset to Defaults", isPresented: $showResetAlert) {

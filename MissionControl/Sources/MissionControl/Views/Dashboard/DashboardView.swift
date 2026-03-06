@@ -4,8 +4,10 @@ struct DashboardView: View {
     @State private var vm = DashboardViewModel()
     @State private var settingsVM = SettingsViewModel()
     @State private var taskInput: String = ""
+    @State private var metricsAppeared = false
 
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         ScrollView {
@@ -24,6 +26,9 @@ struct DashboardView: View {
                         subtitle: vm.metrics.map { trendLabel($0.trends.activeTasksTrend, unit: "") }
                     )
                     .accessibilityIdentifier("metric.activeTasks")
+                    .opacity(metricsAppeared ? 1 : 0)
+                    .scaleEffect(metricsAppeared ? 1 : 0.88, anchor: .bottom)
+                    .animation(reduceMotion ? nil : .spring(response: 0.5, dampingFraction: 0.75).delay(0.0), value: metricsAppeared)
 
                     MetricCard(
                         title: "Success Rate",
@@ -32,6 +37,9 @@ struct DashboardView: View {
                         subtitle: vm.metrics.map { trendLabel(Int($0.trends.successRateTrend * 100), unit: "%") }
                     )
                     .accessibilityIdentifier("metric.successRate")
+                    .opacity(metricsAppeared ? 1 : 0)
+                    .scaleEffect(metricsAppeared ? 1 : 0.88, anchor: .bottom)
+                    .animation(reduceMotion ? nil : .spring(response: 0.5, dampingFraction: 0.75).delay(0.08), value: metricsAppeared)
 
                     MetricCard(
                         title: "Avg Duration",
@@ -40,6 +48,9 @@ struct DashboardView: View {
                         subtitle: vm.metrics.map { trendDuration($0.trends.avgDurationTrend) }
                     )
                     .accessibilityIdentifier("metric.avgDuration")
+                    .opacity(metricsAppeared ? 1 : 0)
+                    .scaleEffect(metricsAppeared ? 1 : 0.88, anchor: .bottom)
+                    .animation(reduceMotion ? nil : .spring(response: 0.5, dampingFraction: 0.75).delay(0.16), value: metricsAppeared)
 
                     MetricCard(
                         title: "Queue Depth",
@@ -48,8 +59,14 @@ struct DashboardView: View {
                         subtitle: vm.metrics.map { trendLabel($0.trends.queueDepthTrend, unit: " tasks") }
                     )
                     .accessibilityIdentifier("metric.queueDepth")
+                    .opacity(metricsAppeared ? 1 : 0)
+                    .scaleEffect(metricsAppeared ? 1 : 0.88, anchor: .bottom)
+                    .animation(reduceMotion ? nil : .spring(response: 0.5, dampingFraction: 0.75).delay(0.24), value: metricsAppeared)
                 }
                 .accessibilityIdentifier("dashboard.metricCards")
+                .onAppear {
+                    metricsAppeared = true
+                }
 
                 // MARK: Pipeline Activity Chart
                 SectionCard(title: "Pipeline Activity", subtitle: "Completions by hour (last 24h)") {
@@ -88,10 +105,12 @@ struct DashboardView: View {
                 // Error banners
                 if let error = vm.error {
                     errorBanner(message: error.localizedDescription)
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
 
                 if let launchError = vm.launchTaskError {
                     errorBanner(message: launchError)
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
             }
             .padding(DesignTokens.Spacing.sectionSpacing)
@@ -121,7 +140,7 @@ struct DashboardView: View {
                 RoundedRectangle(cornerRadius: 4)
                     .fill(DesignTokens.border(for: colorScheme))
                     .frame(height: 20)
-                    .redacted(reason: .placeholder)
+                    .shimmer()
             }
         }
     }
