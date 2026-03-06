@@ -10,7 +10,7 @@ struct ContentView: View {
             case .dashboard:
                 DashboardView()
             case .blueprint:
-                placeholderView(title: "Blueprint", icon: "point.3.connected.trianglepath.dotted")
+                BlueprintView()
             case .sandboxes:
                 placeholderView(title: "Sandboxes", icon: "shippingbox")
             case .agents:
