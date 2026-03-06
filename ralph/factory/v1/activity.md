@@ -24,3 +24,7 @@
 | 8 | N-001 | completed | 3m | Created SidebarView (NavigationSplitView with 6-item list, accent highlight, connection status), updated ContentView (tab switcher with placeholders), updated MissionControlApp to use SidebarView as root |
 | 8 | N-001 | completed | 224s | |
 | 9 | N-002 | completed | 3m | Added AppCommands (Cmd+1-6 tab shortcuts, Pop Out Blueprint Cmd+Shift+B, Pop Out Audit Log Cmd+Shift+A), BlueprintPopoutView, AuditLogPopoutView, upgraded to Window scenes, dynamic MenuBarExtra icon |
+| 9 | N-002 | completed | 225s | |
+| 10 | H-001 | completed | 5m | Created PipelineActivityChart (Swift Charts BarMark, 24-hour data), RecentTasksTable (Table with Task/Agent/Status/Duration), QuickLaunchCard (TextEditor, complexity chips, launch button), DashboardView (full screen layout with MetricCards, chart, table, quick launch); wired ContentView dashboard tab |
+| 10 | H-001 | completed | 289s | |
+| 11 | H-002 | completed | 3m | Added launchTask(description:project:) to DashboardViewModel using injected service; added isLaunchingTask/launchTaskError state; wired DashboardView Quick Launch to vm.launchTask; integrated SettingsViewModel for configurable auto-refresh interval |

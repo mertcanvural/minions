@@ -148,7 +148,7 @@
     "title": "Create Dashboard screen views",
     "description": "Create Sources/MissionControl/Views/Dashboard/DashboardView.swift as the main dashboard screen. Layout: ScrollView with VStack. Top row: HStack of 4 MetricCard views (Active Tasks, Success Rate, Avg Duration, Queue Depth). Middle: SectionCard containing PipelineActivityChart (simple bar chart using Swift Charts framework showing 24 hourly bars). Bottom: HStack with RecentTasksTable (left, wider) and QuickLaunchCard (right). Create Sources/MissionControl/Views/Dashboard/PipelineActivityChart.swift using Charts framework with BarMark, indigo color, x=hour, y=completions. Create Sources/MissionControl/Views/Dashboard/RecentTasksTable.swift with Table view (columns: Task, Agent, Status pill, Duration). Create Sources/MissionControl/Views/Dashboard/QuickLaunchCard.swift with TextField, complexity chips (tappable, auto-estimated), and indigo 'Launch Task' button.",
     "dependencies": ["C-001", "N-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
@@ -157,7 +157,7 @@
     "title": "Connect Dashboard to ViewModel",
     "description": "Wire DashboardView to DashboardViewModel. Add .task { await vm.loadData() } and .onDisappear { vm.stopAutoRefresh() }. Bind MetricCards to vm.metrics. Bind RecentTasksTable to vm.recentTasks. Wire QuickLaunchCard's launch button to vm (via BridgeService.launchTask). Add loading skeleton states (redacted placeholder modifier) and error banner. Ensure auto-refresh works with configurable interval from SettingsViewModel.",
     "dependencies": ["H-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
