@@ -211,7 +211,7 @@
     "title": "Create Sandbox Manager screen",
     "description": "Create Sources/MissionControl/Views/Sandbox/SandboxView.swift as main screen. Top section: PoolStatsBar showing pool size, available, in-use as a segmented visual meter with labels. Filter bar: Picker for status filter + TextField for search. Main content: LazyVGrid (columns: adaptive minimum 320pt) of SandboxCardView. Create Sources/MissionControl/Views/Sandbox/PoolStatsBar.swift with horizontal bar segments colored by status. Create Sources/MissionControl/Views/Sandbox/SandboxCardView.swift showing: task ID (monospace), branch name, status pill (colored per status), project path, created time, duration, pipeline stage as mini progress dots, action buttons (Open Terminal - launches via SandboxViewModel.openTerminal, View Logs, Cleanup). Wire to SandboxViewModel with .task loading and filtered results.",
     "dependencies": ["C-003", "N-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {

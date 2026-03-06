@@ -38,3 +38,5 @@
 | 15 | B-004 | completed | 3m | Created BlueprintCanvasView (scrollable/zoomable canvas, dot grid, layered connections/particles/nodes, glass control bar with play/pause/step/reset/speed, node detail side panel), BlueprintView (screen wrapper with loading/error/empty states), wired into ContentView and BlueprintPopoutView |
 | 15 | B-004 | completed | 182s | |
 | 16 | B-005 | completed | 3m | Added cinematic effects: parallax dot grid on mouse hover, ambient background particles (30 slow-moving dots), node completion flash overlay (white fade-out 0.3s), connection draw-on trim animation (0.5s), auto-scroll to active node via ScrollViewReader, reduceMotion accessibility support |
+| 16 | B-005 | completed | 209s | |
+| 17 | S-001 | completed | 3m | Created PoolStatsBar (segmented visual meter with in-use/warm/available counts and legend), SandboxCardView (task ID, branch, status pill, project path, pipeline stage dots 1-12, terminal/cleanup actions), SandboxView (adaptive 320pt grid, filter picker, search field, refresh button, loading/empty states); wired into ContentView |
