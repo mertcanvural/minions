@@ -1,0 +1,49 @@
+mcpServers:
+  fetch:
+    args:
+    - -y
+    - '@modelcontextprotocol/server-fetch'
+    command: npx
+    env: {}
+    name: fetch
+  filesystem:
+    args:
+    - -y
+    - '@modelcontextprotocol/server-filesystem'
+    - --allowed-directories
+    - /home/ubuntu/Projects/minions/src/server/,/home/ubuntu/Projects/minions/src/api/,/home/ubuntu/Projects/minions/src/services/,/home/ubuntu/Projects/minions/src/controllers/,/home/ubuntu/Projects/minions/src/models/,/home/ubuntu/Projects/minions/src/middleware/,/home/ubuntu/Projects/minions/src/dtos/,/home/ubuntu/Projects/minions/src/entities/,/home/ubuntu/Projects/minions/api/,/home/ubuntu/Projects/minions/server/,/home/ubuntu/Projects/minions/lib/
+    command: npx
+    env: {}
+    name: filesystem
+  github:
+    args:
+    - -y
+    - '@modelcontextprotocol/server-github'
+    command: npx
+    env:
+      GITHUB_PERSONAL_ACCESS_TOKEN: ${GITHUB_TOKEN}
+    name: github
+  postgres:
+    args:
+    - -y
+    - '@modelcontextprotocol/server-postgres'
+    command: npx
+    env:
+      POSTGRES_CONNECTION_STRING: ${POSTGRES_CONNECTION_STRING}
+    name: postgres
+  sequential-thinking:
+    args:
+    - -y
+    - '@modelcontextprotocol/server-sequential-thinking'
+    command: npx
+    env: {}
+    name: sequential-thinking
+  sqlite:
+    args:
+    - -y
+    - '@modelcontextprotocol/server-sqlite'
+    command: npx
+    env: {}
+    name: sqlite
+model: gpt-4o
+provider: openai
