@@ -2,9 +2,8 @@ import SwiftUI
 
 struct DashboardView: View {
     @State private var vm = DashboardViewModel()
+    @State private var settingsVM = SettingsViewModel()
     @State private var taskInput: String = ""
-    @State private var isLaunching: Bool = false
-    @State private var launchError: String? = nil
 
     @Environment(\.colorScheme) private var colorScheme
 
@@ -72,19 +71,19 @@ struct DashboardView: View {
                         QuickLaunchCard(
                             taskInput: $taskInput,
                             estimatedComplexity: estimatedComplexity,
-                            isLaunching: isLaunching,
+                            isLaunching: vm.isLaunchingTask,
                             onLaunch: launchTask
                         )
                     }
                     .frame(width: 280)
                 }
 
-                // Error banner
+                // Error banners
                 if let error = vm.error {
                     errorBanner(message: error.localizedDescription)
                 }
 
-                if let launchError = launchError {
+                if let launchError = vm.launchTaskError {
                     errorBanner(message: launchError)
                 }
             }
@@ -93,7 +92,7 @@ struct DashboardView: View {
         .background(DesignTokens.background(for: colorScheme))
         .task {
             await vm.loadData()
-            vm.startAutoRefresh(interval: 10)
+            vm.startAutoRefresh(interval: settingsVM.dashboardRefreshInterval)
         }
         .onDisappear {
             vm.stopAutoRefresh()
@@ -157,18 +156,11 @@ struct DashboardView: View {
         let description = taskInput.trimmingCharacters(in: .whitespaces)
         guard !description.isEmpty else { return }
 
-        isLaunching = true
-        launchError = nil
-
         Task {
-            do {
-                _ = try await MockBridgeService().launchTask(description: description, project: "")
+            await vm.launchTask(description: description)
+            if vm.launchTaskError == nil {
                 taskInput = ""
-                await vm.loadData()
-            } catch {
-                launchError = "Launch failed: \(error.localizedDescription)"
             }
-            isLaunching = false
         }
     }
 

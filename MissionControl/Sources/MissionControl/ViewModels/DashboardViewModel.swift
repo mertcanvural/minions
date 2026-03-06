@@ -11,6 +11,8 @@ final class DashboardViewModel {
     var recentTasks: [RecentTask] = []
     var isLoading: Bool = false
     var error: Error?
+    var isLaunchingTask: Bool = false
+    var launchTaskError: String?
 
     // MARK: - Private
 
@@ -58,5 +60,20 @@ final class DashboardViewModel {
     func stopAutoRefresh() {
         refreshTimer?.cancel()
         refreshTimer = nil
+    }
+
+    // MARK: - Task Launch
+
+    func launchTask(description: String, project: String = "") async {
+        guard !description.trimmingCharacters(in: .whitespaces).isEmpty else { return }
+        isLaunchingTask = true
+        launchTaskError = nil
+        do {
+            _ = try await service.launchTask(description: description, project: project)
+            await loadData()
+        } catch {
+            launchTaskError = "Launch failed: \(error.localizedDescription)"
+        }
+        isLaunchingTask = false
     }
 }
