@@ -49,7 +49,7 @@
     "title": "Create AppState and environment setup",
     "description": "Create Sources/MissionControl/Design/AppState.swift with an @Observable AppState class holding: selectedTab (enum: dashboard, blueprint, sandboxes, agents, auditLog, settings), bridgeConnected (Bool), theme preference (dark/light/system). Create Sources/MissionControl/Design/Theme.swift with environment key for current theme and color scheme resolution logic. Inject AppState as environment object in MissionControlApp.",
     "dependencies": ["F-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "haiku"
   },
   {

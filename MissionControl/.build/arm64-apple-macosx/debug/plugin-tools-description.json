@@ -44,6 +44,26 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AgentModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AuditModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/BlueprintModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/DashboardModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/SandboxModels.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift"
         },
         {
@@ -75,6 +95,11 @@
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AppState.swift.o",
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swift.o",
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/Theme.swift.o",
+        "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AgentModels.swift.o",
+        "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditModels.swift.o",
+        "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BlueprintModels.swift.o",
+        "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DashboardModels.swift.o",
+        "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels.swift.o",
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.swift.o",
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SectionCard.swift.o",
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/StatusPill.swift.o",
@@ -150,6 +175,26 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AgentModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BlueprintModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DashboardModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.swift.o"
         },
         {
@@ -175,6 +220,11 @@
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/AppState.swift",
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift",
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/Theme.swift",
+        "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AgentModels.swift",
+        "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AuditModels.swift",
+        "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/BlueprintModels.swift",
+        "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/DashboardModels.swift",
+        "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/SandboxModels.swift",
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift",
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/SectionCard.swift",
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/StatusPill.swift",
@@ -490,6 +540,11 @@
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/AppState.swift",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/Theme.swift",
+      "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AgentModels.swift",
+      "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AuditModels.swift",
+      "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/BlueprintModels.swift",
+      "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/DashboardModels.swift",
+      "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/SandboxModels.swift",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/SectionCard.swift",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/StatusPill.swift",
@@ -807,6 +862,26 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AgentModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AuditModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/BlueprintModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/DashboardModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/SandboxModels.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift"
         },
         {
@@ -833,11 +908,27 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AgentModels.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AppState.swift.o"
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BlueprintModels.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DashboardModels.swift.o"
         },
         {
           "kind" : "file",
@@ -850,6 +941,10 @@
         {
           "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels.swift.o"
         },
         {
           "kind" : "file",
@@ -889,11 +984,27 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AgentModels.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AppState.swift.o"
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BlueprintModels.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DashboardModels.swift.o"
         },
         {
           "kind" : "file",
@@ -906,6 +1017,10 @@
         {
           "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels.swift.o"
         },
         {
           "kind" : "file",
