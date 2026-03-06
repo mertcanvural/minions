@@ -283,7 +283,7 @@
     "title": "Create UI tests",
     "description": "Create Tests/MissionControlUITests/NavigationUITests.swift: test app launches successfully, test all 6 sidebar items are visible, test tapping each sidebar item changes the content view, test keyboard shortcuts Cmd+1 through Cmd+6 switch tabs. Create Tests/MissionControlUITests/DashboardUITests.swift: test metric cards are visible, test recent tasks table has rows, test quick launch text field accepts input. Use XCUIApplication and standard accessibility identifiers. Add .accessibilityIdentifier() to key views in the main screens.",
     "dependencies": ["H-002", "N-002"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
