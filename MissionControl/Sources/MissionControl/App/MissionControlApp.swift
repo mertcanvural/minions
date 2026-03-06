@@ -39,7 +39,8 @@ struct MissionControlApp: App {
         }
 
         MenuBarExtra("Mission Control", systemImage: appState.bridgeConnected ? "circle.fill" : "circle") {
-            Text("Menu Bar")
+            MenuBarView()
+                .environment(appState)
         }
     }
 }
