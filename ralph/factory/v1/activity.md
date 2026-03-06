@@ -34,3 +34,5 @@
 | 13 | B-002 | completed | 3m | Created BlueprintNodeView (agentic cloud shape + deterministic rectangle, status visuals, pulsing glow, selection ring), ConnectionView (bezier curves, dashed/solid strokes, arrow heads, status-based coloring), ConnectionsLayerView |
 | 13 | B-002 | completed | 153s | |
 | 14 | B-003 | completed | 2m | Created ParticleFlowView with TimelineView-driven Canvas animation, 4 particles per active connection, bezier path traversal, trail effects (2 fading copies), glow layers, fade in/out at endpoints, configurable speed via simulationSpeed |
+| 14 | B-003 | completed | 129s | |
+| 15 | B-004 | completed | 3m | Created BlueprintCanvasView (scrollable/zoomable canvas, dot grid, layered connections/particles/nodes, glass control bar with play/pause/step/reset/speed, node detail side panel), BlueprintView (screen wrapper with loading/error/empty states), wired into ContentView and BlueprintPopoutView |

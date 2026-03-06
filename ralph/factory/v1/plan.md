@@ -193,7 +193,7 @@
     "title": "Create Blueprint canvas and control bar",
     "description": "Create Sources/MissionControl/Views/Blueprint/BlueprintCanvasView.swift combining all Blueprint sub-views into a scrollable, zoomable canvas. Use ScrollView with magnification gesture. Layer order: background grid pattern, connections, particles, nodes. Add floating control bar (HStack, pill-shaped, glass background) at top with: Play/Pause button, Step Forward button, Reset button, Speed slider (1x-5x), current node label. Add floating side panel (right) when a node is selected showing: node name, type, status, duration, output log (scrollable, SF Mono), retry count. Create Sources/MissionControl/Views/Blueprint/BlueprintView.swift as the screen wrapper that creates BlueprintCanvasView with the BlueprintViewModel.",
     "dependencies": ["B-003", "C-002"],
-    "status": "pending",
+    "status": "completed",
     "model": "opus"
   },
   {
