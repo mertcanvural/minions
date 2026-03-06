@@ -292,7 +292,7 @@
     "title": "Add animations and transitions",
     "description": "Add view transition animations throughout the app: 1) Sidebar selection: .animation(.spring(duration: 0.3)) on content switching. 2) Dashboard metric cards: .transition(.scale.combined(with: .opacity)) on appear. 3) Sandbox cards: .animation(.spring) on filter changes. 4) Audit log rows: .transition(.slide) for new events. 5) Settings: .animation(.easeInOut) on section expand/collapse. 6) Loading states: shimmer effect using gradient mask animation on redacted placeholders. Add matchedGeometryEffect for smooth transitions between sidebar and content where appropriate. Ensure all animations respect .reducedMotion accessibility setting.",
     "dependencies": ["H-002", "B-005", "S-001", "A-001", "L-001", "P-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
