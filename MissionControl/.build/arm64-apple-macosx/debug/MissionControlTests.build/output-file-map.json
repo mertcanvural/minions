@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControlTests.build/master.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Tests/MissionControlTests/Placeholder.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControlTests.build/Placeholder.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControlTests.build/Placeholder.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControlTests.build/Placeholder~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControlTests.build/Placeholder.swiftdeps"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "": {
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/master.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/App/MissionControlApp.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/AppState.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AppState.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AppState.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AppState~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AppState.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/Theme.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/Theme.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/Theme.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/Theme~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/Theme.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AgentModels.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AgentModels.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AgentModels.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AgentModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AgentModels.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/AuditModels.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditModels.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditModels.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditModels.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/BlueprintModels.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BlueprintModels.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BlueprintModels.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BlueprintModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BlueprintModels.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/DashboardModels.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DashboardModels.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DashboardModels.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DashboardModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DashboardModels.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Models/SandboxModels.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Services/Protocols/AuditFileServiceProtocol.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditFileServiceProtocol.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditFileServiceProtocol.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditFileServiceProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditFileServiceProtocol.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Services/Protocols/BridgeServiceProtocol.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BridgeServiceProtocol.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BridgeServiceProtocol.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BridgeServiceProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BridgeServiceProtocol.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Services/Protocols/SettingsServiceProtocol.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SettingsServiceProtocol.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SettingsServiceProtocol.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SettingsServiceProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SettingsServiceProtocol.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/SectionCard.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SectionCard.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SectionCard.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SectionCard~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SectionCard.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/StatusPill.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/StatusPill.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/StatusPill.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/StatusPill~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/StatusPill.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swiftdeps"
+  }
+}

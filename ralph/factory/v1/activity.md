@@ -1,0 +1,62 @@
+# Activity Log
+
+| Iteration | Task ID | Status | Duration | Notes |
+|-----------|---------|--------|----------|-------|
+| 1 | F-001 | completed | 3m | Created Package.swift with swift-tools-version 6.0, app entry point with WindowGroup and MenuBarExtra placeholders |
+| 2 | F-002 | completed | 2m | Created DesignTokens.swift with color tokens, typography, spacing, shadow/glow effects |
+| 3 | F-003 | completed | 3m | Created StatusPill, MetricCard, SectionCard shared components with design tokens |
+| 4 | F-004 | completed | 2m | Created AppState, Theme files, integrated environment injection into MissionControlApp |
+| 5 | D-001 | completed | 4m | Created data models: BlueprintModels, SandboxModels, AgentModels, AuditModels, DashboardModels |
+| 6 | D-002 | completed | 2m | Created service protocols: BridgeServiceProtocol, AuditFileServiceProtocol, SettingsServiceProtocol |
+| 1 | F-001 | completed | 333s | |
+| 7 | D-003 | completed | 5m | Created MockBridgeService (12-node blueprint, 6 agents, routing, 8 tasks, 6 sandboxes), MockAuditFileService (20 events, 8 types), MockSettingsService (defaults) |
+| 2 | D-003 | completed | 392s | |
+| 3 | C-001 | completed | 2m | Created DashboardViewModel with @Observable @MainActor, concurrent loadData(), Task-based auto-refresh |
+| 3 | C-001 | completed | 99s | |
+| 4 | C-002 | completed | 3m | Created BlueprintViewModel with simulation engine, node advancement, speed control, computed progress/counts |
+| 4 | C-002 | completed | 111s | |
+| 5 | C-003 | completed | 2m | Created SandboxViewModel with @Observable @MainActor, filteredSandboxes computed property, openTerminal using osascript for iTerm2/Terminal.app, cleanup with optimistic update |
+| 5 | C-003 | completed | 114s | |
+| 6 | C-004 | completed | 2m | Created AgentProfilesViewModel with @Observable @MainActor, loadProfiles(), routeTask(), estimateComplexity() ported from agent-routing.md heuristic |
+| 6 | C-004 | completed | 87s | |
+| 7 | C-005 | completed | 2m | Created AuditLogViewModel (dual data source, filteredEvents, JSON/CSV export) and SettingsViewModel (all settings fields, URLSession connection test, terminal detection) |
+| 7 | C-005 | completed | 140s | |
+| 8 | N-001 | completed | 3m | Created SidebarView (NavigationSplitView with 6-item list, accent highlight, connection status), updated ContentView (tab switcher with placeholders), updated MissionControlApp to use SidebarView as root |
+| 8 | N-001 | completed | 224s | |
+| 9 | N-002 | completed | 3m | Added AppCommands (Cmd+1-6 tab shortcuts, Pop Out Blueprint Cmd+Shift+B, Pop Out Audit Log Cmd+Shift+A), BlueprintPopoutView, AuditLogPopoutView, upgraded to Window scenes, dynamic MenuBarExtra icon |
+| 9 | N-002 | completed | 225s | |
+| 10 | H-001 | completed | 5m | Created PipelineActivityChart (Swift Charts BarMark, 24-hour data), RecentTasksTable (Table with Task/Agent/Status/Duration), QuickLaunchCard (TextEditor, complexity chips, launch button), DashboardView (full screen layout with MetricCards, chart, table, quick launch); wired ContentView dashboard tab |
+| 10 | H-001 | completed | 289s | |
+| 11 | H-002 | completed | 3m | Added launchTask(description:project:) to DashboardViewModel using injected service; added isLaunchingTask/launchTaskError state; wired DashboardView Quick Launch to vm.launchTask; integrated SettingsViewModel for configurable auto-refresh interval |
+| 11 | H-002 | completed | 499s | |
+| 12 | B-001 | completed | 2m | Created BlueprintLayout.swift with NodeLayout/NodeConnection structs, 12-node layout engine (3-column grid with failure branching), bezier curve connections, path computation for particle animation |
+| 12 | B-001 | completed | 162s | |
+| 13 | B-002 | completed | 3m | Created BlueprintNodeView (agentic cloud shape + deterministic rectangle, status visuals, pulsing glow, selection ring), ConnectionView (bezier curves, dashed/solid strokes, arrow heads, status-based coloring), ConnectionsLayerView |
+| 13 | B-002 | completed | 153s | |
+| 14 | B-003 | completed | 2m | Created ParticleFlowView with TimelineView-driven Canvas animation, 4 particles per active connection, bezier path traversal, trail effects (2 fading copies), glow layers, fade in/out at endpoints, configurable speed via simulationSpeed |
+| 14 | B-003 | completed | 129s | |
+| 15 | B-004 | completed | 3m | Created BlueprintCanvasView (scrollable/zoomable canvas, dot grid, layered connections/particles/nodes, glass control bar with play/pause/step/reset/speed, node detail side panel), BlueprintView (screen wrapper with loading/error/empty states), wired into ContentView and BlueprintPopoutView |
+| 15 | B-004 | completed | 182s | |
+| 16 | B-005 | completed | 3m | Added cinematic effects: parallax dot grid on mouse hover, ambient background particles (30 slow-moving dots), node completion flash overlay (white fade-out 0.3s), connection draw-on trim animation (0.5s), auto-scroll to active node via ScrollViewReader, reduceMotion accessibility support |
+| 16 | B-005 | completed | 209s | |
+| 17 | S-001 | completed | 3m | Created PoolStatsBar (segmented visual meter with in-use/warm/available counts and legend), SandboxCardView (task ID, branch, status pill, project path, pipeline stage dots 1-12, terminal/cleanup actions), SandboxView (adaptive 320pt grid, filter picker, search field, refresh button, loading/empty states); wired into ContentView |
+| 17 | S-001 | completed | 188s | |
+| 18 | A-001 | completed | 4m | Created AgentCardView (avatar circle, model badge, stat chips, task type pills, expandable system prompt), TaskRoutingResultView (agent highlight, complexity badge, keyword chips), AgentProfilesView (route-a-task card with live complexity estimate, 2-col agent grid, dim non-matched); wired .agents tab in ContentView |
+| 18 | A-001 | completed | 195s | |
+| 19 | L-001 | completed | 4m | Created AuditLogView (toolbar with live/mock toggle, search, auto-scroll, export menu), filter chip bar (multi-select per AuditEventType), column headers, List of AuditEventRow with inline expand/collapse, AuditEventDetailView with syntax-highlighted JSON (keys=indigo, values=green), AuditEventType/AuditEvent display extensions, updated ContentView and AuditLogPopoutView |
+| 19 | L-001 | completed | 264s | |
+| 20 | L-002 | completed | 5m | Created RealAuditFileService: JSONL line-by-line parsing with flexible date decoding (Unix timestamp, ISO 8601 ±fractional, snake_case keys), DispatchSource.makeFileSystemObjectSource file watching on main queue, graceful skip of malformed lines; updated AuditLogViewModel to use RealAuditFileService for live data path (stop watching on toggle back to mock), auditDirectoryMissing flag; AuditLogView empty state shows helpful message + switch button when ~/.minion/audit/ is absent |
+| 20 | L-002 | completed | 377s | |
+| 21 | P-001 | completed | 3m | Created SettingsView: custom card-based sections (Connection, Refresh Intervals, Appearance, Audit Log, Terminal, Advanced), @AppStorage for full persistence, inline Test Connection with status indicator, Sliders with value labels, segmented Theme Picker, 5 accent color swatches with selection ring, NSOpenPanel folder picker, Stepper for max events, terminal detection + override Picker, Reset to Defaults with confirmation alert, Save button wired to SettingsViewModel; updated ContentView to use SettingsView |
+| 21 | P-001 | completed | 252s | |
+| 22 | M-001 | completed | 4m | Created MenuBarView: connection status header, stats row (Active/Success/Queue from DashboardViewModel), last 3 audit events (time+type+taskId), Open Dashboard/Launch Task/View Audit Log buttons, Settings footer+version; Launch Task shows a sheet with TextField; updated MissionControlApp MenuBarExtra to use MenuBarView; removed duplicate AuditEventType extensions (reuse from AuditEventDetailView) |
+| 22 | M-001 | completed | 176s | |
+| 23 | T-001 | completed | 4m | Created TestHelpers (QuickMockBridgeService/FailingBridgeService with no delays), DashboardViewModelTests (8 tests: load, error, auto-refresh), BlueprintViewModelTests (19 tests: loadRun, stepForward, simulation, reset, selectNode, computed properties), AuditLogViewModelTests (15 tests: loadEvents, type filter, search, combined filter, data source toggle); all 43 tests pass |
+| 23 | T-001 | completed | 472s | |
+| 24 | T-002 | completed | 8m | Created ModelTests (28 tests: BlueprintNode status transitions, Sandbox status values, AuditEvent Codable round-trips for all 8 event types, TaskComplexity estimation scoring), MockServiceTests (36 tests: expected counts - 6 agents/12 nodes/8 tasks/6 sandboxes/20 audit events, delays within 2s, routing by keyword, launch task uniqueness, MockAuditFileService); all 106 tests pass |
+| 24 | T-002 | completed | 317s | |
+| 25 | T-003 | completed | 8m | Created NavigationUITests (app launch, sidebar 6-item visibility, sidebar click navigation, Cmd+1-6 keyboard shortcuts), DashboardUITests (metric card visibility, recent tasks table rows, quick launch text field input, launch button disabled state); added .accessibilityIdentifier() to sidebar labels, metric cards, section containers, TextEditor, launch button, recent tasks table; set swiftLanguageMode(.v5) on UITest target for Swift 6 XCUIApplication compatibility; all UI tests skip gracefully via XCTSkip when no app bundle (115 tests pass, 8 skipped) |
+| 26 | X-001 | completed | 4m | Created ShimmerModifier (gradient sweep animation, reduceMotion-aware); ContentView: spring opacity cross-fade on tab switch; DashboardView: staggered scale+opacity appear for 4 metric cards with 8ms delays, shimmer on loading rows, slide+opacity on error banners; SandboxView: spring scale+opacity transition on filter changes, shimmer skeleton; AuditLogView: asymmetric slide-from-top insertion/opacity removal on rows; SettingsView: easeInOut fade+slide-up on appear, animated connection test result |
+| 25 | T-003 | completed | 619s | |
+| 26 | X-001 | completed | 491s | |
+| 27 | X-002 | completed | 2m | Verified zero compiler errors, 115 tests pass (8 UI tests skipped by design), no TODOs/dead code, force-unwraps confirmed safe — app build complete |
