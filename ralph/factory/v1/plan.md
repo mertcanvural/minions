@@ -31,7 +31,7 @@
     "title": "Create design system tokens",
     "description": "Create Sources/MissionControl/Design/DesignTokens.swift with all color tokens as static Color properties: accent (#6366F1), backgroundDark (#0F0F14), backgroundLight (#FAFAFA), surfaceDark (#1A1A24), surfaceLight (#FFFFFF), textPrimary, textSecondary (#8B8B9E), success (#22C55E), failure (#EF4444), running (#3B82F6), pending (#6B7280), warning (#F59E0B), border colors. Include semantic computed properties that switch on colorScheme. Add typography constants (SF Pro sizes, SF Mono for code). Add spacing/radius constants (cardRadius=16, standard paddings).",
     "dependencies": ["F-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "haiku"
   },
   {

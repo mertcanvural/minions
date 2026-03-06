@@ -36,6 +36,18 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/SectionCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/StatusPill.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift"
         },
         {
@@ -53,6 +65,9 @@
       "objects" : [
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.swift.o",
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/DesignTokens.swift.o",
+        "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.swift.o",
+        "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SectionCard.swift.o",
+        "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/StatusPill.swift.o",
         "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o"
       ],
       "otherArguments" : [
@@ -117,6 +132,18 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SectionCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/StatusPill.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/ContentView.swift.o"
         },
         {
@@ -128,6 +155,9 @@
       "sources" : [
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/App/MissionControlApp.swift",
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift",
+        "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift",
+        "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/SectionCard.swift",
+        "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/StatusPill.swift",
         "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift"
       ],
       "tempsPath" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build",
@@ -438,6 +468,9 @@
       "-c",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/App/MissionControlApp.swift",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Design/DesignTokens.swift",
+      "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift",
+      "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/SectionCard.swift",
+      "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/StatusPill.swift",
       "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift",
       "-I",
       "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/Modules",
@@ -744,6 +777,18 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/SectionCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/StatusPill.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shell/ContentView.swift"
         }
       ],
@@ -766,7 +811,19 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SectionCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/StatusPill.swift.o"
         }
       ],
       "outputFilePath" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.product/Objects.LinkFileList"
@@ -802,7 +859,19 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MissionControlApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SectionCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/StatusPill.swift.o"
         },
         {
           "kind" : "file",
