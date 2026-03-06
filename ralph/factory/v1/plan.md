@@ -85,7 +85,7 @@
     "title": "Create DashboardViewModel",
     "description": "Create Sources/MissionControl/ViewModels/DashboardViewModel.swift as @Observable class. Properties: metrics (DashboardMetrics), recentTasks ([RecentTask]), isLoading, error, refreshTimer. Methods: loadData() async, startAutoRefresh(interval:), stopAutoRefresh(). Takes BridgeServiceProtocol via init. Auto-refreshes on configurable interval. Handles loading and error states gracefully.",
     "dependencies": ["D-003"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
@@ -94,7 +94,7 @@
     "title": "Create BlueprintViewModel",
     "description": "Create Sources/MissionControl/ViewModels/BlueprintViewModel.swift as @Observable class. Properties: currentRun (BlueprintRun?), selectedNode (BlueprintNode?), isSimulating (Bool), simulationSpeed (Double, 1.0-5.0), activeNodeIndex (Int). Methods: loadRun() async, startSimulation() - advances through nodes with delays matching simulationSpeed, pauseSimulation(), resetSimulation(), stepForward(), selectNode(id:). Simulation updates node statuses from pending->running->completed/failed with realistic timing. Includes computed properties: completedNodeCount, failedNodeCount, currentProgress (0.0-1.0), estimatedTimeRemaining.",
     "dependencies": ["D-003"],
-    "status": "pending",
+    "status": "completed",
     "model": "opus"
   },
   {
@@ -103,7 +103,7 @@
     "title": "Create SandboxViewModel",
     "description": "Create Sources/MissionControl/ViewModels/SandboxViewModel.swift as @Observable class. Properties: sandboxes ([Sandbox]), poolStats (PoolStats), filterStatus (SandboxStatus?), searchQuery (String), isLoading. Methods: loadData() async, filteredSandboxes (computed), openTerminal(sandbox:) - uses Process to launch iTerm2 or Terminal.app at workspace path, cleanup(taskId:) async. Takes BridgeServiceProtocol.",
     "dependencies": ["D-003"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {

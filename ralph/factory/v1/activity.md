@@ -10,3 +10,9 @@
 | 6 | D-002 | completed | 2m | Created service protocols: BridgeServiceProtocol, AuditFileServiceProtocol, SettingsServiceProtocol |
 | 1 | F-001 | completed | 333s | |
 | 7 | D-003 | completed | 5m | Created MockBridgeService (12-node blueprint, 6 agents, routing, 8 tasks, 6 sandboxes), MockAuditFileService (20 events, 8 types), MockSettingsService (defaults) |
+| 2 | D-003 | completed | 392s | |
+| 3 | C-001 | completed | 2m | Created DashboardViewModel with @Observable @MainActor, concurrent loadData(), Task-based auto-refresh |
+| 3 | C-001 | completed | 99s | |
+| 4 | C-002 | completed | 3m | Created BlueprintViewModel with simulation engine, node advancement, speed control, computed progress/counts |
+| 4 | C-002 | completed | 111s | |
+| 5 | C-003 | completed | 2m | Created SandboxViewModel with @Observable @MainActor, filteredSandboxes computed property, openTerminal using osascript for iTerm2/Terminal.app, cleanup with optimistic update |
