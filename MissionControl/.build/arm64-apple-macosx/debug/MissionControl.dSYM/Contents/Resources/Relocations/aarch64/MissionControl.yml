@@ -1,5 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl'
-relocations:     []
-...
