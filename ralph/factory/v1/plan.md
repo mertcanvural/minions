@@ -274,7 +274,7 @@
     "title": "Create model and service tests",
     "description": "Create Tests/MissionControlTests/ModelTests.swift: test BlueprintNode status transitions, test Sandbox status values, test AuditEvent Codable round-trip (encode then decode), test TaskComplexity estimation logic. Create Tests/MissionControlTests/MockServiceTests.swift: test MockBridgeService returns expected counts (6 agent profiles, 12 blueprint nodes, etc.), test mock delays are within expected range, test all protocol methods return valid data.",
     "dependencies": ["D-003"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
