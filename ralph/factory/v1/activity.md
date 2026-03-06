@@ -40,3 +40,5 @@
 | 16 | B-005 | completed | 3m | Added cinematic effects: parallax dot grid on mouse hover, ambient background particles (30 slow-moving dots), node completion flash overlay (white fade-out 0.3s), connection draw-on trim animation (0.5s), auto-scroll to active node via ScrollViewReader, reduceMotion accessibility support |
 | 16 | B-005 | completed | 209s | |
 | 17 | S-001 | completed | 3m | Created PoolStatsBar (segmented visual meter with in-use/warm/available counts and legend), SandboxCardView (task ID, branch, status pill, project path, pipeline stage dots 1-12, terminal/cleanup actions), SandboxView (adaptive 320pt grid, filter picker, search field, refresh button, loading/empty states); wired into ContentView |
+| 17 | S-001 | completed | 188s | |
+| 18 | A-001 | completed | 4m | Created AgentCardView (avatar circle, model badge, stat chips, task type pills, expandable system prompt), TaskRoutingResultView (agent highlight, complexity badge, keyword chips), AgentProfilesView (route-a-task card with live complexity estimate, 2-col agent grid, dim non-matched); wired .agents tab in ContentView |

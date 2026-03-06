@@ -220,7 +220,7 @@
     "title": "Create Agent Profiles screen",
     "description": "Create Sources/MissionControl/Views/AgentProfiles/AgentProfilesView.swift as main screen. Top section: 'Route a Task' card with TextField bound to vm.taskInput, a 'Route' button, and result display showing detected type, selected agent name (highlighted), complexity badge, and keyword matches (each in a chip). Main content: LazyVGrid (2 columns) of AgentCardView. Create Sources/MissionControl/Views/AgentProfiles/AgentCardView.swift showing: SF Symbol avatar in colored circle (paintbrush.pointed for Frontend/purple, server.rack for Backend/blue, cloud for Infra/orange, doc.text for Docs/green, checkmark.shield for Test/teal, star for Generalist/indigo), display name, model badge, timeout + max files stats, task type pills, truncated system prompt (expandable via disclosure). Create Sources/MissionControl/Views/AgentProfiles/TaskRoutingResultView.swift for the routing result display. Wire all to AgentProfilesViewModel.",
     "dependencies": ["C-004", "N-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
