@@ -2,9 +2,13 @@ import SwiftUI
 
 @main
 struct MissionControlApp: App {
+    @State var appState = AppState()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(appState)
+                .applyTheme(appState.themePreference)
         }
         .windowStyle(.hiddenTitleBar)
 

@@ -40,7 +40,7 @@
     "title": "Create shared UI components",
     "description": "Create Sources/MissionControl/Views/Shared/StatusPill.swift - a capsule-shaped view with text and background color based on status string. Create Sources/MissionControl/Views/Shared/MetricCard.swift - a card view with title, large value, trend indicator (up/down arrow with color), and subtitle. Create Sources/MissionControl/Views/Shared/SectionCard.swift - a generic card container with title, optional subtitle, and content ViewBuilder. All use DesignTokens.",
     "dependencies": ["F-002"],
-    "status": "pending",
+    "status": "completed",
     "model": "haiku"
   },
   {
