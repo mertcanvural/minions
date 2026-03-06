@@ -3,6 +3,7 @@ import SwiftUI
 @main
 struct MissionControlApp: App {
     @State var appState = AppState()
+    @Environment(\.openWindow) private var openWindow
 
     var body: some Scene {
         WindowGroup {
@@ -15,22 +16,29 @@ struct MissionControlApp: App {
                 )
         }
         .windowStyle(.hiddenTitleBar)
-
-        WindowGroup("Blueprint Viewer", id: "blueprint-popout") {
-            Text("Blueprint Viewer")
-                .environment(appState)
+        .commands {
+            AppCommands(appState: appState, openWindow: openWindow)
         }
 
-        WindowGroup("Audit Log", id: "audit-popout") {
-            Text("Audit Log")
+        Window("Blueprint Viewer", id: "blueprint-popout") {
+            BlueprintPopoutView()
                 .environment(appState)
+                .applyTheme(appState.themePreference)
+                .frame(minWidth: 900, minHeight: 650)
+        }
+
+        Window("Audit Log", id: "audit-popout") {
+            AuditLogPopoutView()
+                .environment(appState)
+                .applyTheme(appState.themePreference)
+                .frame(minWidth: 800, minHeight: 500)
         }
 
         Settings {
             Text("Settings")
         }
 
-        MenuBarExtra("Mission Control", systemImage: "circle.fill") {
+        MenuBarExtra("Mission Control", systemImage: appState.bridgeConnected ? "circle.fill" : "circle") {
             Text("Menu Bar")
         }
     }

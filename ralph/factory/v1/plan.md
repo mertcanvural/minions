@@ -139,7 +139,7 @@
     "title": "Wire up multi-window support",
     "description": "Update MissionControlApp.swift to add Window scenes for Blueprint (id: 'blueprint-popout') and Audit Log (id: 'audit-popout'). Add keyboard shortcuts: Cmd+1 through Cmd+6 for tab switching. Add menu bar commands for 'Pop Out Blueprint' and 'Pop Out Audit Log' that open new windows. Ensure the main ContentView and popout windows can share the same ViewModels.",
     "dependencies": ["N-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {

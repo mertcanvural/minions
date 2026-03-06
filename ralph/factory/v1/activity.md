@@ -22,3 +22,5 @@
 | 7 | C-005 | completed | 2m | Created AuditLogViewModel (dual data source, filteredEvents, JSON/CSV export) and SettingsViewModel (all settings fields, URLSession connection test, terminal detection) |
 | 7 | C-005 | completed | 140s | |
 | 8 | N-001 | completed | 3m | Created SidebarView (NavigationSplitView with 6-item list, accent highlight, connection status), updated ContentView (tab switcher with placeholders), updated MissionControlApp to use SidebarView as root |
+| 8 | N-001 | completed | 224s | |
+| 9 | N-002 | completed | 3m | Added AppCommands (Cmd+1-6 tab shortcuts, Pop Out Blueprint Cmd+Shift+B, Pop Out Audit Log Cmd+Shift+A), BlueprintPopoutView, AuditLogPopoutView, upgraded to Window scenes, dynamic MenuBarExtra icon |
