@@ -56,6 +56,24 @@
     "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels~partial.swiftmodule",
     "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SandboxModels.swiftdeps"
   },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Services/Protocols/AuditFileServiceProtocol.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditFileServiceProtocol.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditFileServiceProtocol.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditFileServiceProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/AuditFileServiceProtocol.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Services/Protocols/BridgeServiceProtocol.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BridgeServiceProtocol.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BridgeServiceProtocol.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BridgeServiceProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/BridgeServiceProtocol.swiftdeps"
+  },
+  "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Services/Protocols/SettingsServiceProtocol.swift": {
+    "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SettingsServiceProtocol.d",
+    "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SettingsServiceProtocol.swift.o",
+    "swiftmodule": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SettingsServiceProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/SettingsServiceProtocol.swiftdeps"
+  },
   "/Users/macbook/Projects/minions/MissionControl/Sources/MissionControl/Views/Shared/MetricCard.swift": {
     "dependencies": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.d",
     "object": "/Users/macbook/Projects/minions/MissionControl/.build/arm64-apple-macosx/debug/MissionControl.build/MetricCard.swift.o",

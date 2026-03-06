@@ -58,7 +58,7 @@
     "title": "Create core data models",
     "description": "Create Sources/MissionControl/Models/BlueprintModels.swift with: enum NodeType (agentic, deterministic), enum NodeStatus (pending, running, completed, failed, skipped), struct BlueprintNode (id, name, nodeType, status, duration, output, nextOnSuccess, nextOnFailure, retryCount), struct BlueprintRun (id, taskDescription, nodes: [BlueprintNode], startedAt, completedAt, status). Create Sources/MissionControl/Models/SandboxModels.swift with: enum SandboxStatus (warm, claimed, running, completed, failed, cleaned), struct Sandbox (taskId, projectPath, workspacePath, branchName, createdAt, status, duration, pipelineStage), struct PoolStats (poolSize, available, inUse). Create Sources/MissionControl/Models/AgentModels.swift with: struct AgentProfile (name, displayName, model, systemPrompt, taskTypes, maxFiles, timeoutSeconds, iconName, accentColor), enum TaskComplexity (simple, medium, complex), struct TaskRouting (detectedType, selectedAgent, complexity, keywordMatches). Create Sources/MissionControl/Models/AuditModels.swift with: enum AuditEventType (taskStarted, agentSelected, toolSetSelected, blueprintStep, ciResult, prCreated, taskCompleted, taskFailed), struct AuditEvent (timestamp, taskId, eventType, data: [String:String], durationMs). Create Sources/MissionControl/Models/DashboardModels.swift with: struct DashboardMetrics (activeTasks, successRate, avgDuration, queueDepth, trends), struct RecentTask (id, description, agentName, status, duration, startedAt). All conform to Identifiable, Codable where appropriate.",
     "dependencies": ["F-001"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {
