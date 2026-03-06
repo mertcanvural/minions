@@ -76,7 +76,7 @@
     "title": "Create mock service implementations",
     "description": "Create Sources/MissionControl/Services/Mock/MockBridgeService.swift implementing BridgeServiceProtocol with realistic mock data: 4 dashboard metrics with trends, 8 recent tasks across different agents/statuses, a full 12-node blueprint run with mixed statuses, 6 sandboxes in various states, pool stats (3 warm, 2 in-use, 1 available), all 6 agent profiles matching docs/agent-routing.md exactly (Frontend Expert, Backend Expert, Infra Expert, Docs Expert, Test Expert, Generalist), task routing with keyword detection. Create Sources/MissionControl/Services/Mock/MockAuditFileService.swift with 20 mock audit events spanning all event types. Create Sources/MissionControl/Services/Mock/MockSettingsService.swift with sensible defaults (bridgeURL: http://localhost:8080, refreshInterval: 10s, etc.). Add artificial async delays (0.3-0.8s) to simulate network latency.",
     "dependencies": ["D-002"],
-    "status": "pending",
+    "status": "completed",
     "model": "sonnet"
   },
   {

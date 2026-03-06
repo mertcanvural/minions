@@ -8,3 +8,5 @@
 | 4 | F-004 | completed | 2m | Created AppState, Theme files, integrated environment injection into MissionControlApp |
 | 5 | D-001 | completed | 4m | Created data models: BlueprintModels, SandboxModels, AgentModels, AuditModels, DashboardModels |
 | 6 | D-002 | completed | 2m | Created service protocols: BridgeServiceProtocol, AuditFileServiceProtocol, SettingsServiceProtocol |
+| 1 | F-001 | completed | 333s | |
+| 7 | D-003 | completed | 5m | Created MockBridgeService (12-node blueprint, 6 agents, routing, 8 tasks, 6 sandboxes), MockAuditFileService (20 events, 8 types), MockSettingsService (defaults) |
