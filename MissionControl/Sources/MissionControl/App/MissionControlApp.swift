@@ -15,7 +15,8 @@ struct MissionControlApp: App {
                     minHeight: DesignTokens.Spacing.minWindowHeight
                 )
         }
-        .windowStyle(.hiddenTitleBar)
+        .windowStyle(.titleBar)
+        .windowToolbarStyle(.unified)
         .commands {
             AppCommands(appState: appState, openWindow: openWindow)
         }
